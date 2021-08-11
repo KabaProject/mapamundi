@@ -1,0 +1,22 @@
+{
+  "name": "mapamundi",
+  "version": "1.0.0",
+  "description": "API to add the location feature at your project without pay any service ",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "keywords": [
+    "mapamundi",
+    "api",
+    "country",
+    "city"
+  ],
+  "author": "MarioHdez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
