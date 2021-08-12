@@ -6,12 +6,18 @@ class MapModel{
     }
     states (country) {
         const key = country.toLowerCase()
-        return this.data[key]
+        const states = []
+        for (const state in this.data[key].states){
+            states.push(this.data[key].states[state].name)
+        }
+        if(states.length < 1) return undefined
+        return states
     }
     cities (country, state) {
-        const states = this.states(country)
-        const key = state.toLowerCase()
-        return states[key]
+        const keyCountry = country.toLowerCase()
+        const keyState = state.toLowerCase()
+        const stateData = this.data[keyCountry].states[keyState]
+        return stateData
     }
 }
 
