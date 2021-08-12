@@ -1,18 +1,18 @@
 const data = require('../records/world')
 
-class Map{
+class MapModel{
     constructor(){
         this.data = data
     }
-    get states (country) {
+    states (country) {
         const key = country.toLowerCase()
         return this.data[key]
     }
-    get cities (country, state) {
+    cities (country, state) {
         const states = this.states(country)
         const key = state.toLowerCase()
         return states[key]
     }
 }
 
-module.exports = Map()
+module.exports = MapModel

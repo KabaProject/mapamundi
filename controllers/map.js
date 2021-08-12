@@ -1,8 +1,8 @@
 //  IMPORTS
-const MapModel = require('../models/map')
-
+const model = require('../models/map')
+const MapModel = new model()
 class MapController{
-    get country (req, res) {
+    country (req, res) {
         const {country} = req.params
         const data = MapModel.states(country)
         if(!data){
@@ -17,7 +17,7 @@ class MapController{
         })
     }
 
-    get state (req, res) {
+    state (req, res) {
         const {country, state} = req.params
         const data = MapModel.cities(country, state)
         if(!data){
@@ -32,3 +32,5 @@ class MapController{
         })
     }
 }
+
+module.exports = MapController

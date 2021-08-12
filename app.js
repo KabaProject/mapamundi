@@ -8,7 +8,6 @@ const mapRouter = require('./routes/map')
 
 // MIDDLEWARES
 app
-    .use(morgan.format('tiny'))
     .use(express.urlencoded({extended: false}))
 
 // ROUTING
